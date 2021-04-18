@@ -1,0 +1,45 @@
+// Declaro estas variables aquí (y no en variables.scss) porque están únicamente ligadas a esta hoja de estilos
+// (y a la página group.html)
+$card-member-margin: 7.5px;
+$card-img-size: 180px;
+$card-height-percent: 95;
+
+.card-member-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: -$card-member-margin;
+}
+
+.card-member {
+  @extend .glass;
+  width: 95%;
+  height: ($card-height-percent) * 1%;
+  text-align: center;
+  border-radius: 0%;
+}
+
+.card-member__wrapper {
+  position: relative;
+  max-width: 18rem;
+  margin: $card-member-margin;
+}
+
+.card-member__background {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  left: 5%;
+  top: 5%;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.card-member__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: $card-img-size;
+  height: (($card-img-size * 100) / $card-height-percent);
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,50 @@
+.card-song {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 5px 0 theme-color("primary");
+  border: 2px solid black;
+  margin-top: 15px;
+}
+
+.card-song__content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-song__author {
+  font-style: italic;
+}
+
+.card-song__title {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.card-song__youtube-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: theme-color("dark");
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.card-song__img {
+  display: none;
+  width: 30%;
+  height: 100px;
+  object-fit: cover;
+}
+
+@include media-breakpoint-up(sm) {
+  .card-song__img {
+    display: block;
+  }
+}

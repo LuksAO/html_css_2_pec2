@@ -1,0 +1,58 @@
+.text-stunning {
+  font-family: "Bungee Shade", cursive;
+  font-size: 50px;
+  color: black;
+}
+
+@include media-breakpoint-up(sm) {
+  .text-stunning {
+    font-size: 80px;
+  }
+}
+
+.body--index {
+  background-image: url("../images/bnw.jpg");
+  background-size: cover;
+}
+
+.index-text-block {
+  max-width: 500px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "a a a"
+      "t t t"
+      "b b b";
+  }
+
+  @include media-breakpoint-up(md) {
+    .grid {
+      grid-template-areas:
+        "n a t"
+        "n a t"
+        "b b b";
+    }
+  }
+
+  .index-title {
+    grid-area: a;
+  }
+
+  .index-text-block {
+    grid-area: t;
+  }
+
+  .index-button {
+    grid-area: b;
+  }
+}

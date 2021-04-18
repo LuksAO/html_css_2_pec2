@@ -1,0 +1,46 @@
+.body--blog {
+  // "position: relative" es necesario para posicionar "absolute" a ".headphones-img"
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.headphones-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+@include media-breakpoint-up(md) {
+  .headphones-img {
+    width: 50%;
+    max-width: 700px;
+  }
+}
+
+.blog-main-img-container {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  background-image: url("../images/guitar.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.list-styled {
+  li {
+    @extend .mb-3;
+
+    &::marker {
+      color: theme-color("primary");
+      font-weight: 500;
+    }
+  }
+}
+
+.disk-img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: center bottom;
+}
